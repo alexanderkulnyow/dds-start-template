@@ -2,10 +2,10 @@
 # @link https://travis-ci.org/
 
 # For use with the Underscores WordPress theme.
-# @link https://github.com/alexanderkulnyow/dds-start-template
+# @link https://github.com/Automattic/_s
 
 # Tell Travis CI which OS and which distro to use.
-os: Windows
+os: linux
 dist: xenial
 
 # Cache directories between builds.
@@ -30,7 +30,6 @@ php:
   - 7.1
   - 7.2
   - 7.3
-  - 7.4
 
 jobs:
   fast_finish: true
@@ -69,4 +68,4 @@ script:
 # Receive notifications for build results.
 # @link https://docs.travis-ci.com/user/notifications/#configuring-email-notifications
 notifications:
-    email: false
+  email: false
