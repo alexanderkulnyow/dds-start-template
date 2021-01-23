@@ -1,26 +1,3 @@
-# Travis CI (MIT License) configuration file for the Underscores WordPress theme.
-# @link https://travis-ci.org/
-
-# For use with the Underscores WordPress theme.
-# @link https://github.com/alexanderkulnyow/dds-start-template
-
-# Tell Travis CI which OS and which distro to use.
-os: Windows
-dist: xenial
-
-# Cache directories between builds.
-# @link https://docs.travis-ci.com/user/caching/#arbitrary-directories
-cache:
-  directories:
-    # Cache directory for npm.
-    - $HOME/.npm
-    # Cache directory for older Composer versions.
-    - $HOME/.composer/cache/files
-    # Cache directory for more recent Composer versions.
-    - $HOME/.cache/composer/files
-
-# Declare project language.
-# @link https://docs.travis-ci.com/user/languages/php/
 language:
   - php
 
@@ -31,12 +8,6 @@ php:
   - 7.2
   - 7.3
   - 7.4
-
-jobs:
-  fast_finish: true
-  include:
-    - php: 7.4
-      env: SNIFF=1
 
 before_install:
   # Speed up build time by disabling Xdebug.
