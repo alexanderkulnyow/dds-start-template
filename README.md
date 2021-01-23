@@ -18,7 +18,7 @@ Note: `.no-sidebar` styles are automatically loaded.
 
 ### DDS addition (placed in /libs)
 * [Slick slider 1.8.0](https://github.com/kenwheeler/slick)
-* Bootstrap v5.0.0-beta1
+* [Bootstrap v5.0.0-beta1](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
 
 
 Installation
