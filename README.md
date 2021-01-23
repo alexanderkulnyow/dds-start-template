@@ -26,7 +26,7 @@ Installation
 
 ### Requirements
 
-`_s` requires the following dependencies:
+`DDS Start Template` requires the following dependencies:
 
 - [Node.js](https://nodejs.org/)
 - [Composer](https://getcomposer.org/)
