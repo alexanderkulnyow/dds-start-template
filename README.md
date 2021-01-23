@@ -1,8 +1,8 @@
 [![Build Status](https://travis-ci.org/Automattic/_s.svg?branch=master)](https://travis-ci.org/github/alexanderkulnyow/dds-start-temlate)
 
-DDS-Start-Template
+DDS Start Template
 ===
-Hi, this is template based on _s, or underscores. - [_s](https://underscores.me/)
+Hi, this is template based on [underscores.me template](https://underscores.me/)  with several addition
 
 * A modern workflow with a pre-made command-line interface to turn your project into a more pleasant experience.
 * A just right amount of lean, well-commented, modern, HTML5 templates.
@@ -15,6 +15,11 @@ Note: `.no-sidebar` styles are automatically loaded.
 * Smartly organized starter CSS in `style.css` that will help you to quickly get your design off the ground.
 * Full support for `WooCommerce plugin` integration with hooks in `inc/woocommerce.php`, styling override woocommerce.css with product gallery features (zoom, swipe, lightbox) enabled.
 * Licensed under GPLv2 or later. :) Use it to make something cool.
+
+### DDS addition (placed in /libs)
+* [Slick slider 1.8.0](https://github.com/kenwheeler/slick)
+* Bootstrap v5.0.0-beta1
+
 
 Installation
 ---------------
