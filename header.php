@@ -22,11 +22,12 @@
 
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
-<div id="page" class="site">
+<div id="page" class="site container-fluid">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'dds-start-template' ); ?></a>
 
-	<header id="masthead" class="site-header">
-		<div class="site-branding">
+	<header id="masthead" class="site-header container">
+        <div class="row align-items-center justify-content-between">
+		<div class="site-branding col-2">
 			<?php
 			the_custom_logo();
 			if ( is_front_page() && is_home() ) :
@@ -44,8 +45,7 @@
 				<p class="site-description"><?php echo $dds_start_templatedescription; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
 			<?php endif; ?>
 		</div><!-- .site-branding -->
-
-		<nav id="site-navigation" class="main-navigation">
+		<nav id="site-navigation" class="main-navigation col-8">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'dds-start-template' ); ?></button>
 			<?php
 			wp_nav_menu(
@@ -56,4 +56,5 @@
 			);
 			?>
 		</nav><!-- #site-navigation -->
+        </div>
 	</header><!-- #masthead -->

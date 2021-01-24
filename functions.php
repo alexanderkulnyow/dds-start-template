@@ -143,8 +143,11 @@ add_action( 'widgets_init', 'dds_start_templatewidgets_init' );
  * Enqueue scripts and styles.
  */
 function dds_start_templatescripts() {
-	wp_enqueue_style( 'dds-start-template-style', get_stylesheet_uri(), array(), DDS_START_TEMPLATEVERSION );
+	wp_enqueue_style( 'dds-start-template-style', get_stylesheet_uri(), array('bootsrtap'), DDS_START_TEMPLATEVERSION );
+
 	wp_style_add_data( 'dds-start-template-style', 'rtl', 'replace' );
+
+	wp_enqueue_style('bootsrtap', get_template_directory_uri() . '/libs/bootstrap/css/bootstrap.css', array(), '5.0.0-beta1' );
 
 	wp_enqueue_script( 'dds-start-template-navigation', get_template_directory_uri() . '/js/navigation.js', array(), DDS_START_TEMPLATEVERSION, true );
 

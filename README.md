@@ -2,7 +2,7 @@
 
 DDS Start Template
 ===
-Hi, this is template based on [underscores.me template](https://underscores.me/)  with several addition
+Hi, this is started Wordpress Theme based on [underscores.me](https://underscores.me/) template with several addition
 
 * A modern workflow with a pre-made command-line interface to turn your project into a more pleasant experience.
 * A just right amount of lean, well-commented, modern, HTML5 templates.
@@ -19,6 +19,7 @@ Note: `.no-sidebar` styles are automatically loaded.
 ### DDS addition (placed in /libs)
 * [Slick slider 1.8.0](https://github.com/kenwheeler/slick)
 * [Bootstrap v5.0.0-beta1](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
+* sass 7 in 1 with BEM
 
 
 Installation
