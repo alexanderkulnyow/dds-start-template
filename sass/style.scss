@@ -24,77 +24,75 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
 # Normalize
-# Typography
-# Elements
-# Forms
-# Navigation
-	## Links
-	## Menus
-# Accessibility
-# Alignments
-# Widgets
-# Content
-	## Posts and pages
-	## Comments
-# Infinite scroll
-# Media
-	## Captions
-	## Galleries
+# Base
+# Components
+# Layout
+# Pages
+# Themes
+# Utils
+# Vendors
 --------------------------------------------------------------*/
-@import "variables-site/variables-site";
-@import "mixins/mixins-master";
-
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
 @import "normalize";
 
 /*--------------------------------------------------------------
-# Typography
+# Base
 --------------------------------------------------------------*/
-@import "typography/typography";
+@import "base/colors";
+@import "base/typography";
+@import "base/columns";
+@import "base/structure";
+@import "base/infinite-scroll";
 
 /*--------------------------------------------------------------
-# Elements
+# Components
 --------------------------------------------------------------*/
-@import "elements/elements";
+@import "components/buttons";
+@import "components/captions";
+@import "components/elements";
+@import "components/fields";
+@import "components/forms";
+@import "components/galleries";
+@import "components/links";
+@import "components/lists";
+@import "components/media";
+@import "components/menus";
+@import "components/navigation";
+@import "components/tables";
+@import "components/widgets";
 
 /*--------------------------------------------------------------
-# Forms
+# Layout
 --------------------------------------------------------------*/
-@import "forms/forms";
+@import "layout/content-sidebar";
+@import "layout/no-sidebar";
+@import "layout/sidebar-content";
+/*--------------------------------------------------------------
+# Pages
+--------------------------------------------------------------*/
+@import "pages/checkout";
+@import "pages/comments";
+@import "pages/components";
+@import "pages/posts-and-pages";
+@import "pages/products";
+@import "pages/single-product";
 
 /*--------------------------------------------------------------
-# Navigation
+# themes
 --------------------------------------------------------------*/
-@import "navigation/navigation";
+
 
 /*--------------------------------------------------------------
-# Accessibility
+# Utils
 --------------------------------------------------------------*/
-@import "modules/accessibility";
+@import "utils/accessibility";
+@import "utils/alignments";
+@import "utils/mixins";
 
 /*--------------------------------------------------------------
-# Alignments
+# Vendors
 --------------------------------------------------------------*/
-@import "modules/alignments";
 
-/*--------------------------------------------------------------
-# Widgets
---------------------------------------------------------------*/
-@import "site/secondary/widgets";
-
-/*--------------------------------------------------------------
-# Content
---------------------------------------------------------------*/
-@import "site/site";
-
-/*--------------------------------------------------------------
-# Infinite scroll
---------------------------------------------------------------*/
-@import "modules/infinite-scroll";
-
-/*--------------------------------------------------------------
-# Media
---------------------------------------------------------------*/
-@import "media/media";
+@import "media";
