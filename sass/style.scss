@@ -1,9 +1,9 @@
 /*!
 Theme Name:Dds_Start_Template
-Theme URI: https://underscores.me/
+Theme URI: https://underscores.me/123
 Author: Automattic
 Author URI: https://automattic.com/
-Description: Hi. I'm a starter theme called <code>_s</code>, or <em>underscores</em>, if you like. I'm a theme meant for hacking so don't use me as a <em>Parent Theme</em>. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for.
+Description: Hi. I'm a starter theme called <code>12312313</code>, or <em>underscores</em>, if you like. I'm a theme meant for hacking so don't use me as a <em>Parent Theme</em>. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for.
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
@@ -24,77 +24,78 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
 # Normalize
-# Typography
-# Elements
-# Forms
-# Navigation
-	## Links
-	## Menus
-# Accessibility
-# Alignments
-# Widgets
-# Content
-	## Posts and pages
-	## Comments
-# Infinite scroll
-# Media
-	## Captions
-	## Galleries
+# Base
+# Components
+# Layout
+# Pages
+# Themes
+# Utils
+# Vendors
 --------------------------------------------------------------*/
-@import "variables-site/variables-site";
-@import "mixins/mixins-master";
-
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
 @import "normalize";
 
 /*--------------------------------------------------------------
-# Typography
+# Base
 --------------------------------------------------------------*/
-@import "typography/typography";
+@import "base/colors";
+@import "base/typography";
+@import "base/columns";
+@import "base/structure";
+@import "base/infinite-scroll";
+
 
 /*--------------------------------------------------------------
-# Elements
+# Utils
 --------------------------------------------------------------*/
-@import "elements/elements";
+@import "utils/mixins";
+@import "utils/accessibility";
+@import "utils/alignments";
+
 
 /*--------------------------------------------------------------
-# Forms
+# Components
 --------------------------------------------------------------*/
-@import "forms/forms";
+@import "components/buttons";
+@import "components/captions";
+@import "components/elements";
+@import "components/fields";
+@import "components/forms";
+@import "components/galleries";
+@import "components/links";
+@import "components/lists";
+@import "components/media";
+@import "components/menus";
+@import "components/navigation";
+@import "components/tables";
+@import "components/widgets";
 
 /*--------------------------------------------------------------
-# Navigation
+# Layout
 --------------------------------------------------------------*/
-@import "navigation/navigation";
+@import "layout/content-sidebar";
+@import "layout/no-sidebar";
+@import "layout/sidebar-content";
+/*--------------------------------------------------------------
+# Pages
+--------------------------------------------------------------*/
+@import "pages/checkout";
+@import "pages/comments";
+@import "pages/components";
+@import "pages/posts-and-pages";
+@import "pages/products";
+@import "pages/single-product";
 
 /*--------------------------------------------------------------
-# Accessibility
+# themes
 --------------------------------------------------------------*/
-@import "modules/accessibility";
+
+
 
 /*--------------------------------------------------------------
-# Alignments
+# Vendors
 --------------------------------------------------------------*/
-@import "modules/alignments";
 
-/*--------------------------------------------------------------
-# Widgets
---------------------------------------------------------------*/
-@import "site/secondary/widgets";
-
-/*--------------------------------------------------------------
-# Content
---------------------------------------------------------------*/
-@import "site/site";
-
-/*--------------------------------------------------------------
-# Infinite scroll
---------------------------------------------------------------*/
-@import "modules/infinite-scroll";
-
-/*--------------------------------------------------------------
-# Media
---------------------------------------------------------------*/
-@import "media/media";
+@import "media";

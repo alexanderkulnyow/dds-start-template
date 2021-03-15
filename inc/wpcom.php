@@ -12,7 +12,7 @@
  *
  * @global array $themecolors
  */
-function dds_start_templatewpcom_setup() {
+function dds_start_template_wpcom_setup() {
 	global $themecolors;
 
 	// Set theme colors for third party services.
@@ -28,4 +28,4 @@ function dds_start_templatewpcom_setup() {
 		);
 	}
 }
-add_action( 'after_setup_theme', 'dds_start_templatewpcom_setup' );
+add_action( 'after_setup_theme', 'dds_start_template_wpcom_setup' );

@@ -5,9 +5,10 @@
  * navigation support for dropdown menus.
  */
 ( function() {
-	var container, button, menu, links, i, len;
+	var container, burger, button, menu, links, i, len;
 
 	container = document.getElementById( 'site-navigation' );
+	burger = document.getElementById( 'burger' );
 	if ( ! container ) {
 		return;
 	}
@@ -32,9 +33,11 @@
 	button.onclick = function() {
 		if ( -1 !== container.className.indexOf( 'toggled' ) ) {
 			container.className = container.className.replace( ' toggled', '' );
+			burger.className = burger.className.replace('dashicons-no', 'dashicons-menu-alt3');
 			button.setAttribute( 'aria-expanded', 'false' );
 		} else {
 			container.className += ' toggled';
+			burger.className = burger.className.replace('dashicons-menu-alt3', 'dashicons-no');
 			button.setAttribute( 'aria-expanded', 'true' );
 		}
 	};
@@ -44,7 +47,9 @@
 		var isClickInside = container.contains( event.target );
 
 		if ( ! isClickInside ) {
-			container.className = container.className.replace( ' toggled', '' );
+			container.className = container.className.replace( ' toggled', ' ' );
+			hamburger.className = hamburger.className.replace( ' dashicons-no', ' dashicons-menu-alt3' );
+
 			button.setAttribute( 'aria-expanded', 'false' );
 		}
 	} );
@@ -110,3 +115,4 @@
 		}
 	}( container ) );
 }() );
+// console.log('js is auto updating');
