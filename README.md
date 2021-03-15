@@ -37,17 +37,16 @@ Installation
 Clone or download this repository, change its name to something else (like, say, `megatherium-is-awesome`), and then you'll need to do a six-step find and replace on the name in all the templates.
 
 1. Search for `'dds-start-template'` (inside single quotations) to capture the text domain and replace with: `'megatherium-is-awesome'`.
-2. Search for `dds_start_template` to capture all the functions names and replace with: `megatherium_is_awesome_`.
+2. Search for `dds_start_template_` to capture all the functions names and replace with: `megatherium_is_awesome_`.
 3. Search for `Text Domain: dds-start-template` in `style.css` and replace with: `Text Domain: megatherium-is-awesome`.
 4. Search for <code>&nbsp;_s</code> (with a space before it) to capture DocBlocks and replace with: <code>&nbsp;Megatherium_is_Awesome</code>.
 5. Search for `dds-start-template-` to capture prefixed handles and replace with: `megatherium-is-awesome-`.
-6. Search for `DDS_START_TEMPLATE` (in uppercase) to capture constants and replace with: `MEGATHERIUM_IS_AWESOME_`.
+6. Search for `DDS_START_TEMPLATE_` (in uppercase) to capture constants and replace with: `MEGATHERIUM_IS_AWESOME_`.
 
 Then, update the stylesheet header in `style.css`, the links in `footer.php` with your own information and rename `_s.pot` from `languages` folder to use the theme's slug. Next, update or delete this readme.
 
 ### Setup
 
-To start using all the tools that comes with `_s`  you need to install the necessary Node.js and Composer dependencies :
 
 ```sh
 $ composer install

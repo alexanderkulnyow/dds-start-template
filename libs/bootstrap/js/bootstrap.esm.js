@@ -1391,7 +1391,7 @@ var Carousel = /*#__PURE__*/function (_BaseComponent) {
     });
   };
 
-  _proto._setActiveIndicatorElement = function _setActiveIndicatorElement(element) {
+  _proto._setActiveIndicatorElement = function Dds_Start_Template_etActiveIndicatorElement(element) {
     if (this._indicatorsElement) {
       var indicators = SelectorEngine.find(SELECTOR_ACTIVE, this._indicatorsElement);
 
@@ -1424,7 +1424,7 @@ var Carousel = /*#__PURE__*/function (_BaseComponent) {
     }
   };
 
-  _proto._slide = function _slide(direction, element) {
+  _proto._slide = function Dds_Start_Template_lide(direction, element) {
     var _this5 = this;
 
     var activeElement = SelectorEngine.findOne(SELECTOR_ACTIVE_ITEM, this._element);
@@ -2716,7 +2716,7 @@ var Modal = /*#__PURE__*/function (_BaseComponent) {
     return config;
   };
 
-  _proto._showElement = function _showElement(relatedTarget) {
+  _proto._showElement = function Dds_Start_Template_howElement(relatedTarget) {
     var _this4 = this;
 
     var transition = this._element.classList.contains(CLASS_NAME_FADE);
@@ -2784,7 +2784,7 @@ var Modal = /*#__PURE__*/function (_BaseComponent) {
     });
   };
 
-  _proto._setEscapeEvent = function _setEscapeEvent() {
+  _proto._setEscapeEvent = function Dds_Start_Template_etEscapeEvent() {
     var _this6 = this;
 
     if (this._isShown) {
@@ -2802,7 +2802,7 @@ var Modal = /*#__PURE__*/function (_BaseComponent) {
     }
   };
 
-  _proto._setResizeEvent = function _setResizeEvent() {
+  _proto._setResizeEvent = function Dds_Start_Template_etResizeEvent() {
     var _this7 = this;
 
     if (this._isShown) {
@@ -2844,7 +2844,7 @@ var Modal = /*#__PURE__*/function (_BaseComponent) {
     this._backdrop = null;
   };
 
-  _proto._showBackdrop = function _showBackdrop(callback) {
+  _proto._showBackdrop = function Dds_Start_Template_howBackdrop(callback) {
     var _this9 = this;
 
     var animate = this._element.classList.contains(CLASS_NAME_FADE) ? CLASS_NAME_FADE : '';
@@ -2971,7 +2971,7 @@ var Modal = /*#__PURE__*/function (_BaseComponent) {
     this._scrollbarWidth = this._getScrollbarWidth();
   };
 
-  _proto._setScrollbar = function _setScrollbar() {
+  _proto._setScrollbar = function Dds_Start_Template_etScrollbar() {
     var _this11 = this;
 
     if (this._isBodyOverflowing) {
@@ -3738,7 +3738,7 @@ var Tooltip = /*#__PURE__*/function (_BaseComponent) {
     return AttachmentMap[placement.toUpperCase()];
   };
 
-  _proto._setListeners = function _setListeners() {
+  _proto._setListeners = function Dds_Start_Template_etListeners() {
     var _this5 = this;
 
     var triggers = this.config.trigger.split(' ');
@@ -4880,7 +4880,7 @@ var Toast = /*#__PURE__*/function (_BaseComponent) {
     return config;
   };
 
-  _proto._setListeners = function _setListeners() {
+  _proto._setListeners = function Dds_Start_Template_etListeners() {
     var _this4 = this;
 
     EventHandler.on(this._element, EVENT_CLICK_DISMISS$1, SELECTOR_DATA_DISMISS$1, function () {

@@ -14,7 +14,7 @@
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
 
-	<?php dds_start_templatepost_thumbnail(); ?>
+	<?php dds_start_template_post_thumbnail(); ?>
 
 	<div class="entry-content">
 		<?php

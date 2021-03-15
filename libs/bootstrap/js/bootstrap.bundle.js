@@ -1394,7 +1394,7 @@
       });
     };
 
-    _proto._setActiveIndicatorElement = function _setActiveIndicatorElement(element) {
+    _proto._setActiveIndicatorElement = function Dds_Start_Template_etActiveIndicatorElement(element) {
       if (this._indicatorsElement) {
         var indicators = SelectorEngine.find(SELECTOR_ACTIVE, this._indicatorsElement);
 
@@ -1427,7 +1427,7 @@
       }
     };
 
-    _proto._slide = function _slide(direction, element) {
+    _proto._slide = function Dds_Start_Template_lide(direction, element) {
       var _this5 = this;
 
       var activeElement = SelectorEngine.findOne(SELECTOR_ACTIVE_ITEM, this._element);
@@ -2338,7 +2338,7 @@
   }
 
   function arrow(_ref) {
-    var _state$modifiersData$;
+    var Dds_Start_Template_tate$modifiersData$;
 
     var state = _ref.state,
         name = _ref.name;
@@ -2370,7 +2370,7 @@
     var offset = within(min, center, max); // Prevents breaking syntax highlighting...
 
     var axisProp = axis;
-    state.modifiersData[name] = (_state$modifiersData$ = {}, _state$modifiersData$[axisProp] = offset, _state$modifiersData$.centerOffset = offset - center, _state$modifiersData$);
+    state.modifiersData[name] = (_state$modifiersData$ = {}, Dds_Start_Template_tate$modifiersData$[axisProp] = offset, Dds_Start_Template_tate$modifiersData$.centerOffset = offset - center, Dds_Start_Template_tate$modifiersData$);
   }
 
   function effect$1(_ref2) {
@@ -2731,7 +2731,7 @@
   /*
   given a DOM element, return the list of all scroll parents, up the list of ancesors
   until we get to the top window object. This list is what we attach scroll listeners
-  to, because if any of these parent elements scroll, we'll need to re-calculate the 
+  to, because if any of these parent elements scroll, we'll need to re-calculate the
   reference element's position.
   */
 
@@ -3118,7 +3118,7 @@
     fn: flip,
     requiresIfExists: ['offset'],
     data: {
-      _skip: false
+      Dds_Start_Template_kip: false
     }
   };
 
@@ -3576,9 +3576,9 @@
             return;
           }
 
-          var _state$elements = state.elements,
-              reference = _state$elements.reference,
-              popper = _state$elements.popper; // Don't proceed if `reference` or `popper` are not valid elements
+          var Dds_Start_Template_tate$elements = state.elements,
+              reference = Dds_Start_Template_tate$elements.reference,
+              popper = Dds_Start_Template_tate$elements.popper; // Don't proceed if `reference` or `popper` are not valid elements
           // anymore
 
           if (!areValidElements(reference, popper)) {
@@ -3614,11 +3614,11 @@
               continue;
             }
 
-            var _state$orderedModifie = state.orderedModifiers[index],
-                fn = _state$orderedModifie.fn,
-                _state$orderedModifie2 = _state$orderedModifie.options,
-                _options = _state$orderedModifie2 === void 0 ? {} : _state$orderedModifie2,
-                name = _state$orderedModifie.name;
+            var Dds_Start_Template_tate$orderedModifie = state.orderedModifiers[index],
+                fn = Dds_Start_Template_tate$orderedModifie.fn,
+                Dds_Start_Template_tate$orderedModifie2 = Dds_Start_Template_tate$orderedModifie.options,
+                _options = Dds_Start_Template_tate$orderedModifie2 === void 0 ? {} : Dds_Start_Template_tate$orderedModifie2,
+                name = Dds_Start_Template_tate$orderedModifie.name;
 
             if (typeof fn === 'function') {
               state = fn({
@@ -4434,7 +4434,7 @@
       return config;
     };
 
-    _proto._showElement = function _showElement(relatedTarget) {
+    _proto._showElement = function Dds_Start_Template_howElement(relatedTarget) {
       var _this4 = this;
 
       var transition = this._element.classList.contains(CLASS_NAME_FADE);
@@ -4502,7 +4502,7 @@
       });
     };
 
-    _proto._setEscapeEvent = function _setEscapeEvent() {
+    _proto._setEscapeEvent = function Dds_Start_Template_etEscapeEvent() {
       var _this6 = this;
 
       if (this._isShown) {
@@ -4520,7 +4520,7 @@
       }
     };
 
-    _proto._setResizeEvent = function _setResizeEvent() {
+    _proto._setResizeEvent = function Dds_Start_Template_etResizeEvent() {
       var _this7 = this;
 
       if (this._isShown) {
@@ -4562,7 +4562,7 @@
       this._backdrop = null;
     };
 
-    _proto._showBackdrop = function _showBackdrop(callback) {
+    _proto._showBackdrop = function Dds_Start_Template_howBackdrop(callback) {
       var _this9 = this;
 
       var animate = this._element.classList.contains(CLASS_NAME_FADE) ? CLASS_NAME_FADE : '';
@@ -4689,7 +4689,7 @@
       this._scrollbarWidth = this._getScrollbarWidth();
     };
 
-    _proto._setScrollbar = function _setScrollbar() {
+    _proto._setScrollbar = function Dds_Start_Template_etScrollbar() {
       var _this11 = this;
 
       if (this._isBodyOverflowing) {
@@ -5456,7 +5456,7 @@
       return AttachmentMap[placement.toUpperCase()];
     };
 
-    _proto._setListeners = function _setListeners() {
+    _proto._setListeners = function Dds_Start_Template_etListeners() {
       var _this5 = this;
 
       var triggers = this.config.trigger.split(' ');
@@ -6598,7 +6598,7 @@
       return config;
     };
 
-    _proto._setListeners = function _setListeners() {
+    _proto._setListeners = function Dds_Start_Template_etListeners() {
       var _this4 = this;
 
       EventHandler.on(this._element, EVENT_CLICK_DISMISS$1, SELECTOR_DATA_DISMISS$1, function () {
