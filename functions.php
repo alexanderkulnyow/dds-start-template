@@ -19,7 +19,7 @@ add_action( 'widgets_init', 'dds_start_template_widgets_init' );
 
 if ( ! defined( 'DDS_START_TEMPLATE_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( 'DDS_START_TEMPLATE_VERSION', '1.0.0' );
+	define( 'DDS_START_TEMPLATE_VERSION', '1.0.1' );
 }
 
 if ( ! function_exists( 'dds_start_template_setup' ) ) :
