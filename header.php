@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @packageDds_Start_Template
+ * @package Dds_Start_Template
  */
 ?>
 <!doctype html>
@@ -64,3 +64,8 @@
             </button>
         </nav><!-- #site-navigation -->
     </header><!-- #masthead -->
+    <div class="img-fluid">
+	    <?php the_header_image_tag();
+	    ?>
+    </div>
+

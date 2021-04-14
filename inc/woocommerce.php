@@ -4,7 +4,7 @@
  *
  * @link https://woocommerce.com/
  *
- * @packageDds_Start_Template
+ * @package Dds_Start_Template
  */
 
 /**
@@ -77,6 +77,7 @@ add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' );
  * @param  array $classes CSS classes applied to the body tag.
  * @return array $classes modified to include 'woocommerce-active' class.
  */
+
 function dds_start_template_woocommerce_active_body_class( $classes ) {
 	$classes[] = 'woocommerce-active';
 

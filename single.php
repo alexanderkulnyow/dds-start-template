@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
- * @packageDds_Start_Template
+ * @package Dds_Start_Template
  */
 
 get_header();

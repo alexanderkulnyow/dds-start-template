@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Creating_an_Error_404_Page
  *
- * @packageDds_Start_Template
+ * @package Dds_Start_Template
  */
 
 get_header();

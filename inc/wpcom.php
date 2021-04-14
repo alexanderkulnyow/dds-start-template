@@ -4,7 +4,7 @@
  *
  * This file is centrally included from `wp-content/mu-plugins/wpcom-theme-compat.php`.
  *
- * @packageDds_Start_Template
+ * @package Dds_Start_Template
  */
 
 /**

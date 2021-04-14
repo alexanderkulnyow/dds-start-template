@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @packageDds_Start_Template
+ * @package Dds_Start_Template
  */
 
 ?>
