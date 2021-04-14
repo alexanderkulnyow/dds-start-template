@@ -48,7 +48,7 @@
 
 		if ( ! isClickInside ) {
 			container.className = container.className.replace( ' toggled', ' ' );
-			hamburger.className = hamburger.className.replace( ' dashicons-no', ' dashicons-menu-alt3' );
+			burger.className = burger.className.replace( ' dashicons-no', ' dashicons-menu-alt3' );
 
 			button.setAttribute( 'aria-expanded', 'false' );
 		}

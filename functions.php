@@ -11,11 +11,89 @@
 /*
  * Actions
  */
+add_action( 'wp_head', 'dds_structure_data', 10 );
 add_action( 'after_setup_theme', 'dds_start_template_setup' );
 add_action( 'after_setup_theme', 'dds_start_template_content_width', 0 );
 add_action( 'wp_enqueue_scripts', 'dds_start_template_scripts' );
 add_action( 'widgets_init', 'dds_start_template_widgets_init' );
 
+function dds_structure_data() {
+	$structure_data_post    = array(
+		"@context"    => "https://schema.org",
+		"@type"       => "Article",
+		"headline"    => the_title(),
+		"image"       => the_post_thumbnail_url(),
+		"author"      => the_author(),
+		"url"         => the_permalink(),
+		"dateCreated" => get_the_date(),
+		"description" => the_excerpt(),
+	);
+	$structure_data_product = array(
+		"@context"        => "https://schema.org/",
+		"@type"           => "Product",
+		"name"            => the_title(),
+		"image"           => the_post_thumbnail_url(),
+		"description"     => the_excerpt(),
+		"mpn"             => "925872",
+		"brand"           => array(
+			"@type" => "Thing",
+			"name"  => "Unilyuba"
+		),
+		"aggregateRating" => array(
+			"@type"       => "AggregateRating",
+			"ratingValue" => get_comment_meta( $comment->comment_ID, 'rating', true ),
+			"reviewCount" => "89"
+		),
+		"offers"          => array(
+			"@type"           => "Offer",
+			"priceCurrency"   => "USD",
+			"price"           => "119.99",
+			"priceValidUntil" => "2020-11-05",
+			"itemCondition"   => "http://schema.org/UsedCondition",
+			"availability"    => "http://schema.org/InStock",
+			"seller"          => array(
+				"@type" => "Organization",
+				"name"  => "Executive Objects"
+			)
+		)
+	);
+	/*
+	 * Список тегов страниц wordpress
+	 * https://wp-kama.ru/function-tag/uslovnyie-tegi
+	 *
+	 * 	is_archive()
+	 *  is_category()
+	 *  is_front_page()
+	 *  is_page()
+	 *  is_post_type_archive()
+	 *  is_singular()
+	 *
+	 * Список условных тегов Woocommerce
+	 *
+	 *  is_cart()
+	 *  is_checkout()
+	 *  is_checkout_pay_page()
+	 *  is_product()
+	 *  is_product_tag()
+	 *  is_shop()
+	 *  is_woocommerce()
+	 *  wc_coupons_enabled()
+	 */
+	if ( is_singular( 'post' ) ) {
+//		$result = array_merge( $structure_data_post, $structure_data_product );
+		echo '<script type="application/ld+json">';
+//		$result array_filter( array $result [, callable $callback [, int $flag = 0 ]] )
+		echo json_encode( array_filter( $structure_data_post ), JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES );
+		echo '</script>';
+	} elseif ( is_product() ) {
+//		$result = array_merge( $structure_data_post, $structure_data_product );
+		echo '<script type="application/ld+json">';
+//		$result array_filter( array $result [, callable $callback [, int $flag = 0 ]] )
+		echo json_encode( array_filter( $structure_data_product ), JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES );
+		echo '</script>';
+	}
+
+}
 
 if ( ! defined( 'DDS_START_TEMPLATE_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
@@ -156,11 +234,11 @@ function dds_start_template_scripts() {
 
 	wp_enqueue_style( 'dashicons' );
 
-	wp_enqueue_style( 'dds-start-template-style', get_stylesheet_uri(), array('bootsrtap'), DDS_START_TEMPLATE_VERSION );
+	wp_enqueue_style( 'dds-start-template-style', get_stylesheet_uri(), array( 'bootsrtap' ), DDS_START_TEMPLATE_VERSION );
 
 	wp_style_add_data( 'dds-start-template-style', 'rtl', 'replace' );
 
-	wp_enqueue_style('bootsrtap', get_template_directory_uri() . '/libs/bootstrap/css/bootstrap.css', array(), '5.0.0-beta1' );
+	wp_enqueue_style( 'bootsrtap', get_template_directory_uri() . '/libs/bootstrap/css/bootstrap.css', array(), '5.0.0-beta1' );
 
 	wp_enqueue_script( 'dds-start-template-navigation', get_template_directory_uri() . '/js/navigation.js', array(), DDS_START_TEMPLATE_VERSION, true );
 
@@ -192,6 +270,10 @@ require get_template_directory() . '/inc/template-functions.php';
  */
 require get_template_directory() . '/inc/customizer.php';
 
+
+require get_template_directory() . '/inc/class-term-meta-img.php';
+
+
 /**
  * Load Jetpack compatibility file.
  */
@@ -211,11 +293,10 @@ if ( class_exists( 'WooCommerce' ) ) {
 /**
  * Display native post thumbnail or a fallback image.
  *
- * @param  string  $size
- * @param  string  $attr
+ * @param string $size
+ * @param string $attr
  */
-function the_post_thumbnail_fallback( $size = 'post-thumbnail', $attr = '' )
-{
+function the_post_thumbnail_fallback( $size = 'post-thumbnail', $attr = '' ) {
 	if ( has_post_thumbnail() ) :
 		echo get_the_post_thumbnail( null, $size, $attr );
 
@@ -227,11 +308,12 @@ function the_post_thumbnail_fallback( $size = 'post-thumbnail', $attr = '' )
 		/**
 		 * Filters the post thumbnail HTML.
 		 *
-		 * @param  string  $html  The post thumbnail HTML.
-		 * @param  int  $post_id  The post ID.
-		 * @param  string  $post_thumbnail_id  The post thumbnail ID.
-		 * @param  string|array  $size  The post thumbnail size. Image size or array of width and height values (in that order). Default 'post-thumbnail'.
-		 * @param  string  $attr  Query string of attributes.
+		 * @param string $html The post thumbnail HTML.
+		 * @param int $post_id The post ID.
+		 * @param string $post_thumbnail_id The post thumbnail ID.
+		 * @param string|array $size The post thumbnail size. Image size or array of width and height values (in that order). Default 'post-thumbnail'.
+		 * @param string $attr Query string of attributes.
+		 *
 		 * @since 2.9.0
 		 */
 		echo apply_filters( 'post_thumbnail_html', $html, null, $post_thumbnail_id, $size, $attr );

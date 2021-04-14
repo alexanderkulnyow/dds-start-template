@@ -4,7 +4,7 @@
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
- * @packageDds_Start_Template
+ * @package Dds_Start_Template
  */
 
 if ( ! function_exists( 'dds_start_template_posted_on' ) ) :

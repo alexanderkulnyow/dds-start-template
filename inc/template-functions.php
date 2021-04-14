@@ -2,7 +2,7 @@
 /**
  * Functions which enhance the theme by hooking into WordPress
  *
- * @packageDds_Start_Template
+ * @package Dds_Start_Template
  */
 
 /**
