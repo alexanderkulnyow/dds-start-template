@@ -6,7 +6,8 @@
 	width: 100%;
 	height: 100px;
 	overflow: hidden;
-	.navbar-brand{
+
+	.navbar-brand {
 		width: 100px;
 		height: auto;
 	}
@@ -89,12 +90,13 @@
 	//background: $color__background-body;
 	//display: block;
 }
-.toggled{
+
+.toggled {
 	button {
 		z-index: 101;
 	}
 
-	.nav-menu{
+	.nav-menu {
 		position: fixed;
 		top: 0;
 		right: 0;
@@ -107,7 +109,8 @@
 		//z-index: 100;
 		background: $color__background-body;
 		overflow: hidden;
-		li{
+
+		li {
 
 		}
 	}
