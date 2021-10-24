@@ -43,7 +43,7 @@ if ( ! function_exists( 'dds_start_template_header_style' ) ) :
 	 */
 	function dds_start_template_header_style() {
 		$header_text_color = get_header_textcolor();
-
+		
 		/*
 		 * If no custom options for text are set, let's bail.
 		 * get_header_textcolor() options: Any hex value, 'blank' to hide text. Default: add_theme_support( 'custom-header' ).
@@ -51,11 +51,11 @@ if ( ! function_exists( 'dds_start_template_header_style' ) ) :
 		if ( get_theme_support( 'custom-header', 'default-text-color' ) === $header_text_color ) {
 			return;
 		}
-
+		
 		// If we get this far, we have custom styles. Let's do this.
 		?>
-        <style type="text/css">
-            <?php
+		<style type="text/css">
+			<?php
 			// Has the text been hidden?
 			if ( ! display_header_text() ) :
 				?>
@@ -65,17 +65,17 @@ if ( ! function_exists( 'dds_start_template_header_style' ) ) :
                 clip: rect(1px, 1px, 1px, 1px);
             }
 
-            <?php
+			<?php
 			// If the user has set a custom color for the text use that.
-		else :
-			?>
+	else :
+		?>
             .site-title a,
             .site-description {
                 color: #<?php echo esc_attr( $header_text_color ); ?>;
             }
 
-            <?php endif; ?>
-        </style>
+			<?php endif; ?>
+		</style>
 		<?php
 	}
 endif;

@@ -14,7 +14,7 @@
  */
 function dds_start_template_wpcom_setup() {
 	global $themecolors;
-
+	
 	// Set theme colors for third party services.
 	if ( ! isset( $themecolors ) ) {
 		// Whitelist wpcom specific variable intended to be overruled.
@@ -28,4 +28,5 @@ function dds_start_template_wpcom_setup() {
 		);
 	}
 }
+
 add_action( 'after_setup_theme', 'dds_start_template_wpcom_setup' );

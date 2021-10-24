@@ -1,9 +1,9 @@
 /*!
-Theme Name:Dds_Start_Template
-Theme URI: https://underscores.me/
+Theme Name: Dds_Start_Template
+Theme URI: https://underscores.me/123
 Author: Automattic
 Author URI: https://automattic.com/
-Description: Hi. I'm a starter theme called <code>_s</code>, or <em>underscores</em>, if you like. I'm a theme meant for hacking so don't use me as a <em>Parent Theme</em>. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for.
+Description: Hi. I'm a starter theme called <code>12312313</code>, or <em>underscores</em>, if you like. I'm a theme meant for hacking so don't use me as a <em>Parent Theme</em>. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for.
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
@@ -809,8 +809,16 @@ object {
   display: block; }
 
 .main-navigation {
-  display: block;
-  width: 100%; }
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+  overflow: hidden; }
+  .main-navigation .navbar-brand {
+    width: 100px;
+    height: auto; }
   .main-navigation ul {
     display: none;
     list-style: none;
@@ -842,9 +850,21 @@ object {
     text-decoration: none; }
 
 /* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
-  display: block; }
+.toggled button {
+  z-index: 101; }
+
+.toggled .nav-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  overflow: hidden; }
 
 @media screen and (min-width: 37.5em) {
   .menu-toggle {
@@ -891,8 +911,16 @@ a {
 ## Menus
 --------------------------------------------------------------*/
 .main-navigation {
-  display: block;
-  width: 100%; }
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+  overflow: hidden; }
+  .main-navigation .navbar-brand {
+    width: 100px;
+    height: auto; }
   .main-navigation ul {
     display: none;
     list-style: none;
@@ -924,9 +952,21 @@ a {
     text-decoration: none; }
 
 /* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
-  display: block; }
+.toggled button {
+  z-index: 101; }
+
+.toggled .nav-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  overflow: hidden; }
 
 @media screen and (min-width: 37.5em) {
   .menu-toggle {
@@ -1239,22 +1279,22 @@ p.stars.selected a:not(.active)::before {
 .woocommerce-password-strength {
   text-align: left; }
   .woocommerce-password-strength.strong {
-    color: #0f834d; }
+    color: #198754; }
   .woocommerce-password-strength.short {
-    color: #e2401c; }
+    color: #dc3545; }
   .woocommerce-password-strength.bad {
-    color: #e2401c; }
+    color: #dc3545; }
   .woocommerce-password-strength.good {
-    color: #3d9cd2; }
+    color: #0dcaf0; }
 
 /**
  * Forms
  */
 .form-row.woocommerce-validated input.input-text {
-  box-shadow: inset -2px 0 0 #0f834d; }
+  box-shadow: inset -2px 0 0 #198754; }
 
 .form-row.woocommerce-invalid input.input-text {
-  box-shadow: inset -2px 0 0 #e2401c; }
+  box-shadow: inset -2px 0 0 #dc3545; }
 
 .required {
   color: #f00; }
@@ -1267,16 +1307,16 @@ p.stars.selected a:not(.active)::before {
 .woocommerce-error,
 .woocommerce-noreviews,
 p.no-comments {
-  background-color: #0f834d;
+  background-color: #198754;
   clear: both; }
 
 .woocommerce-info,
 .woocommerce-noreviews,
 p.no-comments {
-  background-color: #3d9cd2; }
+  background-color: #0dcaf0; }
 
 .woocommerce-error {
-  background-color: #e2401c; }
+  background-color: #dc3545; }
 
 .demo_store {
   position: fixed;
@@ -1285,7 +1325,7 @@ p.no-comments {
   left: 0;
   margin: 0;
   padding: 1em;
-  background-color: #3d9cd2;
+  background-color: #0dcaf0;
   z-index: 9999; }
 
 @media screen and (min-width: 48em) {
@@ -1415,10 +1455,10 @@ ul.products {
   display: none; }
 
 .stock.in-stock {
-  color: #0f834d; }
+  color: #198754; }
 
 .stock.out-of-stock {
-  color: #e2401c; }
+  color: #dc3545; }
 
 /*--------------------------------------------------------------
 # themes

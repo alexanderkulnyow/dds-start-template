@@ -2,7 +2,7 @@
 # @link https://travis-ci.org/
 
 # For use with the Underscores WordPress theme.
-# @link https://github.com/Automattic/_s
+# @link
 
 # Tell Travis CI which OS and which distro to use.
 os: linux

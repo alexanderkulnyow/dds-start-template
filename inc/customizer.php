@@ -1,6 +1,6 @@
 <?php
 /**
- *Dds_Start_Template Theme Customizer
+ * Dds_Start_Template Theme Customizer
  *
  * @package Dds_Start_Template
  */
