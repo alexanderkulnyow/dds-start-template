@@ -1,5 +1,4 @@
-[![Build Status](https://travis-ci.org/Automattic/_s.svg?branch=master)](https://travis-ci.org/github/alexanderkulnyow/dds-start-temlate)
-
+[![Build Status](https://app.travis-ci.com/alexanderkulnyow/dds-start-template.svg?branch=master)](https://app.travis-ci.com/alexanderkulnyow/dds-start-template)
 DDS Start Template
 ===
 Hi, this is started Wordpress Theme based on [underscores.me](https://underscores.me/) template with several addition
