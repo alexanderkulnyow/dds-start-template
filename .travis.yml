@@ -2,7 +2,7 @@
 # @link https://travis-ci.org/
 
 # For use with the Underscores WordPress theme.
-# @link https://github.com/Automattic/_s
+# @link
 
 # Tell Travis CI which OS and which distro to use.
 os: linux
@@ -25,17 +25,17 @@ language:
   - php
 
 php:
-  - 5.6
-  - 7.0
-  - 7.1
+#  - 5.6
+#  - 7.0
+#  - 7.1
   - 7.2
   - 7.3
 
-jobs:
-  fast_finish: true
-  include:
-    - php: 7.4
-      env: SNIFF=1
+#jobs:
+#  fast_finish: true
+#  include:
+#    - php: 7.4
+#      env: SNIFF=1
 
 before_install:
   # Speed up build time by disabling Xdebug.

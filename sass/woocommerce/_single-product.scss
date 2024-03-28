@@ -6,14 +6,17 @@
 		.woocommerce-product-gallery {
 			position: relative;
 			float: left;
-			figure{
+
+			figure {
 				width: 100%;
 				height: auto;
-				a{
+
+				a {
 					width: 100%;
-				img{
-					width: 100% !important;
-				}
+
+					img {
+						width: 100% !important;
+					}
 				}
 			}
 

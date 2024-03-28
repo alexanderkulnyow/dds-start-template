@@ -49,8 +49,9 @@
   "scripts": {
     "compile:css": "node-sass sass/style.scss style.css stylelint '*.css' --fix || true && stylelint '*.css' --fix",
     "compile:rtl": "rtlcss style.css style-rtl.css",
-    "lint:scss": "wp-scripts lint-style 'sass/**/*.scss'",
-    "lint:js": "wp-scripts lint-js 'js/*.js'",
+    "lint:scss": "wp-scripts lint-style 'sass/**/*.scss' ",
+    "lint:js": "wp-scripts lint-js ./js",
+    "lint:fix": "wp-scripts lint-js ./js --fix",
     "bundle": "node bin/bundle.js",
     "watch:css": "npm-watch compile:css"
   }

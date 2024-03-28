@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @packageDds_Start_Template
+ * @package Dds_Start_Template
  */
 
 ?>
@@ -12,17 +12,17 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
-
+		
 		<?php if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php
-			dds_start_template_posted_on();
-			dds_start_template_posted_by();
-			?>
-		</div><!-- .entry-meta -->
+			<div class="entry-meta">
+				<?php
+				dds_start_template_posted_on();
+				dds_start_template_posted_by();
+				?>
+			</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
-
+	
 	<?php dds_start_template_post_thumbnail(); ?>
 
 	<div class="entry-summary">

@@ -4,7 +4,7 @@
  *
  * @link https://jetpack.com/
  *
- * @packageDds_Start_Template
+ * @package Dds_Start_Template
  */
 
 /**
@@ -24,15 +24,15 @@ function dds_start_template_jetpack_setup() {
 			'footer'    => 'page',
 		)
 	);
-
+	
 	// Add theme support for Responsive Videos.
 	add_theme_support( 'jetpack-responsive-videos' );
-
+	
 	// Add theme support for Content Options.
 	add_theme_support(
 		'jetpack-content-options',
 		array(
-			'post-details' => array(
+			'post-details'    => array(
 				'stylesheet' => 'dds-start-template-style',
 				'date'       => '.posted-on',
 				'categories' => '.cat-links',
@@ -48,6 +48,7 @@ function dds_start_template_jetpack_setup() {
 		)
 	);
 }
+
 add_action( 'after_setup_theme', 'dds_start_template_jetpack_setup' );
 
 /**

@@ -33,11 +33,11 @@
 	button.onclick = function() {
 		if ( -1 !== container.className.indexOf( 'toggled' ) ) {
 			container.className = container.className.replace( ' toggled', '' );
-			burger.className = burger.className.replace('dashicons-no', 'dashicons-menu-alt3');
+			burger.className = burger.className.replace( 'dashicons-no', 'dashicons-menu-alt3' );
 			button.setAttribute( 'aria-expanded', 'false' );
 		} else {
 			container.className += ' toggled';
-			burger.className = burger.className.replace('dashicons-menu-alt3', 'dashicons-no');
+			burger.className = burger.className.replace( 'dashicons-menu-alt3', 'dashicons-no' );
 			button.setAttribute( 'aria-expanded', 'true' );
 		}
 	};
@@ -48,7 +48,7 @@
 
 		if ( ! isClickInside ) {
 			container.className = container.className.replace( ' toggled', ' ' );
-			hamburger.className = hamburger.className.replace( ' dashicons-no', ' dashicons-menu-alt3' );
+			burger.className = burger.className.replace( ' dashicons-no', ' dashicons-menu-alt3' );
 
 			button.setAttribute( 'aria-expanded', 'false' );
 		}

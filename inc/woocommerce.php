@@ -4,7 +4,7 @@
  *
  * @link https://woocommerce.com/
  *
- * @packageDds_Start_Template
+ * @package Dds_Start_Template
  */
 
 /**
@@ -35,6 +35,7 @@ function dds_start_template_woocommerce_setup() {
 	add_theme_support( 'wc-product-gallery-lightbox' );
 	add_theme_support( 'wc-product-gallery-slider' );
 }
+
 add_action( 'after_setup_theme', 'dds_start_template_woocommerce_setup' );
 
 /**
@@ -44,7 +45,7 @@ add_action( 'after_setup_theme', 'dds_start_template_woocommerce_setup' );
  */
 function dds_start_template_woocommerce_scripts() {
 	wp_enqueue_style( 'dds-start-template-woocommerce-style', get_template_directory_uri() . '/woocommerce.css', array(), DDS_START_TEMPLATE_VERSION );
-
+	
 	$font_path   = WC()->plugin_url() . '/assets/fonts/';
 	$inline_font = '@font-face {
 			font-family: "star";
@@ -56,9 +57,10 @@ function dds_start_template_woocommerce_scripts() {
 			font-weight: normal;
 			font-style: normal;
 		}';
-
+	
 	wp_add_inline_style( 'dds-start-template-woocommerce-style', $inline_font );
 }
+
 add_action( 'wp_enqueue_scripts', 'dds_start_template_woocommerce_scripts' );
 
 /**
@@ -74,20 +76,23 @@ add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' );
 /**
  * Add 'woocommerce-active' class to the body tag.
  *
- * @param  array $classes CSS classes applied to the body tag.
+ * @param array $classes CSS classes applied to the body tag.
+ *
  * @return array $classes modified to include 'woocommerce-active' class.
  */
 function dds_start_template_woocommerce_active_body_class( $classes ) {
 	$classes[] = 'woocommerce-active';
-
+	
 	return $classes;
 }
+
 add_filter( 'body_class', 'dds_start_template_woocommerce_active_body_class' );
 
 /**
  * Related Products Args.
  *
  * @param array $args related products args.
+ *
  * @return array $args related products args.
  */
 function dds_start_template_woocommerce_related_products_args( $args ) {
@@ -95,11 +100,12 @@ function dds_start_template_woocommerce_related_products_args( $args ) {
 		'posts_per_page' => 3,
 		'columns'        => 3,
 	);
-
+	
 	$args = wp_parse_args( $defaults, $args );
-
+	
 	return $args;
 }
+
 add_filter( 'woocommerce_output_related_products_args', 'dds_start_template_woocommerce_related_products_args' );
 
 /**
@@ -118,7 +124,7 @@ if ( ! function_exists( 'dds_start_template_woocommerce_wrapper_before' ) ) {
 	 */
 	function dds_start_template_woocommerce_wrapper_before() {
 		?>
-			<main id="primary" class="site-main">
+		<main id="primary" class="site-main">
 		<?php
 	}
 }
@@ -134,7 +140,7 @@ if ( ! function_exists( 'dds_start_template_woocommerce_wrapper_after' ) ) {
 	 */
 	function dds_start_template_woocommerce_wrapper_after() {
 		?>
-			</main><!-- #main -->
+		</main><!-- #main -->
 		<?php
 	}
 }
@@ -145,11 +151,11 @@ add_action( 'woocommerce_after_main_content', 'dds_start_template_woocommerce_wr
  *
  * You can add the WooCommerce Mini Cart to header.php like so ...
  *
-	<?php
-		if ( function_exists( 'dds_start_template_woocommerce_header_cart' ) ) {
-			dds_start_template_woocommerce_header_cart();
-		}
-	?>
+ * <?php
+ * if ( function_exists( 'dds_start_template_woocommerce_header_cart' ) ) {
+ * dds_start_template_woocommerce_header_cart();
+ * }
+ * ?>
  */
 
 if ( ! function_exists( 'dds_start_template_woocommerce_cart_link_fragment' ) ) {
@@ -159,13 +165,14 @@ if ( ! function_exists( 'dds_start_template_woocommerce_cart_link_fragment' ) ) 
 	 * Ensure cart contents update when products are added to the cart via AJAX.
 	 *
 	 * @param array $fragments Fragments to refresh via AJAX.
+	 *
 	 * @return array Fragments to refresh via AJAX.
 	 */
 	function dds_start_template_woocommerce_cart_link_fragment( $fragments ) {
 		ob_start();
 		dds_start_template_woocommerce_cart_link();
 		$fragments['a.cart-contents'] = ob_get_clean();
-
+		
 		return $fragments;
 	}
 }
@@ -181,15 +188,17 @@ if ( ! function_exists( 'dds_start_template_woocommerce_cart_link' ) ) {
 	 */
 	function dds_start_template_woocommerce_cart_link() {
 		?>
-		<a class="cart-contents" href="<?php echo esc_url( wc_get_cart_url() ); ?>" title="<?php esc_attr_e( 'View your shopping cart', 'dds-start-template' ); ?>">
+		<a class="cart-contents" href="<?php echo esc_url( wc_get_cart_url() ); ?>"
+		   title="<?php esc_attr_e( 'View your shopping cart', 'dds-start-template' ); ?>">
 			<?php
 			$item_count_text = sprintf(
-				/* translators: number of items in the mini cart. */
+			/* translators: number of items in the mini cart. */
 				_n( '%d item', '%d items', WC()->cart->get_cart_contents_count(), 'dds-start-template' ),
 				WC()->cart->get_cart_contents_count()
 			);
 			?>
-			<span class="amount"><?php echo wp_kses_data( WC()->cart->get_cart_subtotal() ); ?></span> <span class="count"><?php echo esc_html( $item_count_text ); ?></span>
+			<span class="amount"><?php echo wp_kses_data( WC()->cart->get_cart_subtotal() ); ?></span> <span
+					class="count"><?php echo esc_html( $item_count_text ); ?></span>
 		</a>
 		<?php
 	}
@@ -217,7 +226,7 @@ if ( ! function_exists( 'dds_start_template_woocommerce_header_cart' ) ) {
 				$instance = array(
 					'title' => '',
 				);
-
+				
 				the_widget( 'WC_Widget_Cart', $instance );
 				?>
 			</li>
